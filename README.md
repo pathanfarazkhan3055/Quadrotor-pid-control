@@ -1,20 +1,25 @@
-# PID Control of Quadrotor Altitude Stabilization Under Wind Gust Disturbances
+# Quadrotor Altitude Regulation Using PID Control in the Presence of Wind Disturbances
 
-## Project Description
+## Project Summary
 
-This project investigates the development of a PID-based control strategy for maintaining stable altitude in a quadrotor unmanned aerial vehicle (UAV) subjected to environmental disturbances. The study focuses on enhancing flight stability, improving altitude tracking accuracy, and minimizing the impact of external factors such as wind gusts and system uncertainties through classical control techniques.
+This project focuses on the development and performance evaluation of a PID-based altitude control system for a quadrotor UAV operating under external wind disturbances.
 
-The complete controller design and performance analysis were carried out using MATLAB and Simulink as part of the AA216: Flight Mechanics and Classical Control course at IIT Indore.
+The controller is designed to accurately maintain the desired flight altitude, suppress the effects of environmental disturbances, and stabilize a dynamically unstable system. This work was completed as part of the **AA216 – Flight Mechanics and Classical Control** course at **Indian Institute of Technology Indore**.
 
-## Objective
+---
 
-The primary goals of this project were:
+## Problem Description
 
-- Stabilize an inherently unstable quadrotor altitude system
-- Maintain accurate reference tracking under varying conditions
-- Reduce the influence of external disturbances
-- Improve transient and steady-state performance
-- Evaluate controller robustness using classical control methods
+Maintaining a constant altitude is challenging for quadrotor drones due to several factors:
+
+* Wind gust disturbances ranging from 0–15 m/s
+* Measurement noise from onboard sensors
+* Nonlinear characteristics of motor actuators
+* Intrinsically unstable open-loop flight dynamics
+
+The primary goal of this project is to design a robust PID controller capable of delivering stable and reliable altitude regulation under these conditions.
+
+---
 
 ## Mathematical Model
 
@@ -26,83 +31,67 @@ Gp(s) = 6.25 / (s² − 2s + 6.25)
 
 Gm(s) = 20 / (s + 20)
 
-### Controller Structure
+### PID Controller
 
 C(s) = Kp + Ki/s + Kd·s
 
-## Methodology
+---
 
-The controller design process involved:
+## Control Design Methodology
 
-- Dynamic system modeling
-- PID gain tuning
-- Stability verification
-- Frequency-domain analysis
-- Time-domain response evaluation
-- MATLAB/Simulink-based simulation studies
+The following classical control techniques were employed during controller development:
 
-## Analytical Techniques
+* PID Controller Tuning
+* BIBO Stability Assessment
+* Routh–Hurwitz Stability Analysis
+* Root Locus Design
+* Frequency Response Analysis using Bode Plots
+* Steady-State Error Evaluation
+* MATLAB/Simulink Simulation and Validation
 
-- Root Locus Design
-- Routh-Hurwitz Stability Test
-- BIBO Stability Analysis
-- Bode Frequency Response Analysis
-- Steady-State Error Evaluation
-- Closed-Loop Performance Assessment
+---
 
 ## Optimized PID Parameters
 
 | Parameter | Value |
-|-----------|--------|
-| Kp | 3.0 |
-| Ki | 1.5 |
-| Kd | 0.8 |
+| --------- | ----- |
+| Kp        | 3.0   |
+| Ki        | 1.5   |
+| Kd        | 0.8   |
 
-## Performance Metrics
+---
 
-| Parameter | Result |
-|------------|---------|
-| Steady-State Error | ~0% |
-| Rise Time | ~1.4 s |
-| Overshoot | ~0.3 m |
-| Settling Time | ~2.1 s |
-| Phase Margin | ~58° |
-| Gain Margin | ~11 dB |
+## Performance Results
 
-## Key Outcomes
+| Performance Metric | Result              |
+| ------------------ | ------------------- |
+| Steady-State Error |  ~0%    |
+| Rise Time          |  ~1.4 s |
+| Maximum Overshoot  |  ~0.3 m |
+| Settling Time      |  ~2.1 s |
+| Phase Margin       |  ~58°   |
+| Gain Margin        |  ~11 dB |
 
-- Achieved stable closed-loop altitude regulation
-- Demonstrated effective rejection of wind-induced disturbances
-- Improved transient response characteristics
-- Maintained high tracking accuracy
-- Verified controller robustness through simulation-based validation
+The implemented PID controller successfully achieved closed-loop stability, minimized altitude tracking error, and demonstrated strong rejection of wind-induced disturbances.
 
-## Practical Applications
+---
 
-- Autonomous UAV Navigation
-- Aerial Surveillance Systems
-- Precision Agriculture Drones
-- Infrastructure Monitoring
-- Delivery and Logistics UAVs
-- Intelligent Flight Control Systems
+## Potential Applications
 
-## Repository Contents
+* Autonomous Package Delivery UAVs
+* Agricultural Monitoring and Spraying Drones
+* Structural Inspection Platforms
+* High-Precision Hovering and Surveillance Systems
 
-- Detailed Project Report
-- MATLAB Scripts
-- Simulink Models
-- Simulation Outputs
-- Performance Analysis Results
+---
 
-## Team Members
+## Repository Structure
 
-- Faraz Khan
-- Akash Kumar Gupta
-- Piyush Rathore
-- Anurag Krishnan
+* Final Project Report (PDF)
 
-## Institution
+---
 
-Indian Institute of Technology Indore
 
-AA216 – Flight Mechanics and Classical Control
+**Pathan Farazkhan Hushenkhan**
+**Indian Institute of Technology Indore**
+**AA216 – Flight Mechanics and Classical Control**
