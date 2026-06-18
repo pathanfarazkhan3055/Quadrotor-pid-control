@@ -92,8 +92,8 @@ The implemented PID controller successfully achieved closed-loop stability, mini
 ---
 
 
-#Pathan Farazkhan Hushenkhan
-#AA216 – Flight Mechanics and Classical Control
-#Indian Institute of Technology Indore
+# Pathan Farazkhan Hushenkhan
+# AA216 – Flight Mechanics and Classical Control
+# Indian Institute of Technology Indore
 
 
